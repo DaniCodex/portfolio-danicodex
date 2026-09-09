@@ -1,0 +1,31 @@
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+
+const socials = [
+  ['YouTube', 'https://www.youtube.com/@danicodex'],
+  ['GitHub', 'https://github.com/DaniCodex'],
+  ['Instagram', 'https://www.instagram.com/danicodex.dev/'],
+  ['LinkedIn', 'https://www.linkedin.com/in/danicodex/'],
+  ['X', 'https://x.com/danicodex'],
+];
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div className="shell footer-main">
+        <div>
+          <p className="eyebrow">Sigamos aprendiendo</p>
+          <h2>Una comunidad que convierte ideas en código.</h2>
+        </div>
+        <a className="button button-primary" href="https://www.youtube.com/@danicodex?sub_confirmation=1" target="_blank" rel="noreferrer">
+          Suscríbete al canal <ArrowUpRight size={18} aria-hidden="true" />
+        </a>
+      </div>
+      <div className="shell footer-bottom">
+        <Link className="brand" href="/"><span>Dani<span>Codex</span></span></Link>
+        <div className="social-links">{socials.map(([name, url]) => <a key={name} href={url} target="_blank" rel="noreferrer">{name}</a>)}</div>
+        <p>Hecho con código y curiosidad.</p>
+      </div>
+    </footer>
+  );
+}
