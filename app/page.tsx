@@ -15,7 +15,6 @@ export default function Home() {
 
       <section className="hero shell">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Programación clara, proyectos reales</p>
           <h1>Aprende programación <em>construyendo.</em></h1>
           <p className="hero-lede">Soy Michael Daniel Pacheco, creador de DaniCodex. Te enseño a pasar de la idea al código con cursos gratuitos y proyectos explicados paso a paso.</p>
           <div className="hero-actions">
@@ -52,16 +51,23 @@ export default function Home() {
               <div className="tags">{projects[0].technologies.map((tech) => <span key={tech}>{tech}</span>)}</div>
               <a className="text-link" href={projects[0].repoUrl} target="_blank" rel="noreferrer">Explorar repositorio <ArrowRight size={17} aria-hidden="true" /></a>
             </div>
-            <div className="project-mark" aria-hidden="true">V<span>26</span></div>
+            <a className="featured-project-media" href={projects[0].repoUrl} target="_blank" rel="noreferrer" aria-label={`Ver ${projects[0].title} en GitHub`}>
+              <img src={projects[0].thumbnail} alt={`Vista previa de ${projects[0].title}`} />
+            </a>
           </article>
           <div className="project-grid">
             {projects.slice(1).map((project, index) => (
               <article className={`project-card accent-${project.accent}`} key={project.title}>
-                <div className="project-card-top"><span>{String(index + 2).padStart(2, '0')}</span><CodeXml size={20} aria-hidden="true" /></div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="tags">{project.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div>
-                <a href={project.repoUrl} target="_blank" rel="noreferrer">Ver código <ArrowUpRight size={16} aria-hidden="true" /></a>
+                <a className="project-card-media" href={project.repoUrl} target="_blank" rel="noreferrer" aria-label={`Ver ${project.title} en GitHub`}>
+                  <img src={project.thumbnail} alt={`Vista previa de ${project.title}`} />
+                </a>
+                <div className="project-card-body">
+                  <div className="project-card-top"><span>{String(index + 2).padStart(2, '0')}</span><CodeXml size={20} aria-hidden="true" /></div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="tags">{project.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div>
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer">Ver código <ArrowUpRight size={16} aria-hidden="true" /></a>
+                </div>
               </article>
             ))}
           </div>

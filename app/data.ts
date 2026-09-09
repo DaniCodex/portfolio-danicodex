@@ -1,7 +1,7 @@
 export type CourseCategory = 'inicio' | 'programacion' | 'proyectos';
 
 export interface Course { slug: string; title: string; description: string; category: CourseCategory; level: string; lessons: string; url: string; thumbnail: string; }
-export interface Project { title: string; description: string; technologies: string[]; repoUrl: string; liveUrl?: string; accent: string; }
+export interface Project { title: string; description: string; technologies: string[]; repoUrl: string; liveUrl?: string; thumbnail: string; accent: string; }
 
 export const courses: Course[] = [
   { slug: 'pseint-desde-cero', title: 'Lógica de Programación con PSeInt', description: 'Domina algoritmos, variables, condicionales y ciclos con ejercicios progresivos desde cero.', category: 'inicio', level: 'Principiante', lessons: '47 lecciones', url: 'https://www.youtube.com/playlist?list=PLZmtYtnx3IcUR9P1pZ7VOWlzvizYB6EF-', thumbnail: 'https://i.ytimg.com/vi/I9zCEqyDeYg/hqdefault.jpg' },
@@ -19,9 +19,9 @@ export const courses: Course[] = [
 export const featuredCourses = courses.slice(0, 3);
 
 export const projects: Project[] = [
-  { title: 'Votómetro', description: 'Plataforma cívica para explorar afinidades con propuestas de las Elecciones Perú 2026 de forma clara y accesible.', technologies: ['HTML', 'CSS', 'JavaScript', 'Datos'], repoUrl: 'https://github.com/DaniCodex/votometro', liveUrl: 'https://votometrolat.com/', accent: 'blue' },
-  { title: 'Flores Amarillas', description: 'Experiencia web interactiva que combina animación, música y creatividad con tecnologías web.', technologies: ['HTML', 'CSS', 'JavaScript'], repoUrl: 'https://github.com/DaniCodex/flores-amarillas-tres', accent: 'yellow' },
-  { title: 'Formulario Dinámico', description: 'Interfaz animada de registro e inicio de sesión construida desde cero para enseñar fundamentos frontend.', technologies: ['HTML', 'CSS', 'JavaScript'], repoUrl: 'https://github.com/DaniCodex/Formulario-dinamico-HTML-CSS-JS', accent: 'cyan' },
-  { title: '100 Proyectos con JavaScript', description: 'Reto progresivo de proyectos con JavaScript puro: DOM, APIs, estado, LocalStorage y lógica de negocio.', technologies: ['JavaScript', 'APIs', 'LocalStorage'], repoUrl: 'https://github.com/DaniCodex/100-proyectos-javascript', accent: 'orange' },
-  { title: 'Sistema de Biblioteca', description: 'Simulación de gestión de una biblioteca digital desarrollada para practicar estructuras y lógica con C++.', technologies: ['C++', 'POO', 'Consola'], repoUrl: 'https://github.com/DaniCodex/sistema-bibloteca-cpp', accent: 'purple' },
+  { title: 'Votómetro', description: 'Plataforma cívica para explorar afinidades con propuestas de las Elecciones Perú 2026 de forma clara y accesible.', technologies: ['HTML', 'CSS', 'JavaScript', 'Datos'], repoUrl: 'https://github.com/DaniCodex/votometro', liveUrl: 'https://votometrolat.com/', thumbnail: 'https://opengraph.githubassets.com/danicodex-portfolio/DaniCodex/votometro', accent: 'blue' },
+  { title: 'Flores Amarillas', description: 'Experiencia web interactiva que combina animación, música y creatividad con tecnologías web.', technologies: ['HTML', 'CSS', 'JavaScript'], repoUrl: 'https://github.com/DaniCodex/flores-amarillas-tres', thumbnail: 'https://github.com/user-attachments/assets/899d1b33-bc87-45f8-8cb9-e11cf992a9d6', accent: 'yellow' },
+  { title: 'Formulario Dinámico', description: 'Interfaz animada de registro e inicio de sesión construida desde cero para enseñar fundamentos frontend.', technologies: ['HTML', 'CSS', 'JavaScript'], repoUrl: 'https://github.com/DaniCodex/Formulario-dinamico-HTML-CSS-JS', thumbnail: 'https://user-images.githubusercontent.com/85034795/147512236-80fe2b7d-81cb-4b18-82f3-1341b0f74953.png', accent: 'cyan' },
+  { title: '100 Proyectos con JavaScript', description: 'Reto progresivo de proyectos con JavaScript puro: DOM, APIs, estado, LocalStorage y lógica de negocio.', technologies: ['JavaScript', 'APIs', 'LocalStorage'], repoUrl: 'https://github.com/DaniCodex/100-proyectos-javascript', thumbnail: 'https://opengraph.githubassets.com/danicodex-portfolio/DaniCodex/100-proyectos-javascript', accent: 'orange' },
+  { title: 'Sistema de Biblioteca', description: 'Simulación de gestión de una biblioteca digital desarrollada para practicar estructuras y lógica con C++.', technologies: ['C++', 'POO', 'Consola'], repoUrl: 'https://github.com/DaniCodex/sistema-bibloteca-cpp', thumbnail: 'https://github.com/user-attachments/assets/2e3bdac9-ff8f-4474-a3f5-e01db2378a73', accent: 'purple' },
 ];
