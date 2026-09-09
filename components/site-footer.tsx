@@ -1,5 +1,5 @@
+/* eslint-disable next/no-html-link-for-pages -- static export uses full-page internal navigation */
 import { ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
 
 const socials = [
   ['YouTube', 'https://www.youtube.com/@danicodex'],
@@ -22,10 +22,11 @@ export function SiteFooter() {
         </a>
       </div>
       <div className="shell footer-bottom">
-        <Link className="brand" href="/"><span>Dani<span>Codex</span></span></Link>
+        <a className="brand" href="/"><span>Dani<span>Codex</span></span></a>
         <div className="social-links">{socials.map(([name, url]) => <a key={name} href={url} target="_blank" rel="noreferrer">{name}</a>)}</div>
         <p>Hecho con código y curiosidad.</p>
       </div>
     </footer>
   );
 }
+/* eslint-disable next/no-html-link-for-pages -- static export uses full-page internal navigation */

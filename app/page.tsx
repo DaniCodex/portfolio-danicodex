@@ -1,6 +1,5 @@
-/* eslint-disable next/no-img-element -- static export uses first-party remote creator assets */
+/* eslint-disable next/no-img-element, next/no-html-link-for-pages -- static export uses remote assets and full-page internal navigation */
 import { ArrowRight, ArrowUpRight, CodeXml, GitBranch, Play } from 'lucide-react';
-import Link from 'next/link';
 import { CourseCard } from '@/components/course-card';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
@@ -34,7 +33,7 @@ export default function Home() {
       <section className="section shell" aria-labelledby="cursos-title">
         <div className="section-heading">
           <div><p className="eyebrow">Tu siguiente paso</p><h2 id="cursos-title">Cursos para avanzar de verdad</h2></div>
-          <Link className="text-link" href="/cursos">Ver todas las rutas <ArrowRight size={17} aria-hidden="true" /></Link>
+          <a className="text-link" href="/cursos">Ver todas las rutas <ArrowRight size={17} aria-hidden="true" /></a>
         </div>
         <div className="course-grid">
           {featuredCourses.map((course) => <CourseCard course={course} key={course.slug} />)}
