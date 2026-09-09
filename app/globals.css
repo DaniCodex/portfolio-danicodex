@@ -27,7 +27,7 @@ img { display: block; max-width: 100%; }
 .header-inner { min-height: 70px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; width: max-content; font-weight: 780; letter-spacing: -.04em; font-size: 1.15rem; }
 .brand img { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.16); }
-.brand > span > span { color: #4f9cff; margin-left: .1em; }
+.brand > span > span { color: #4f9cff; }
 .desktop-nav { display: flex; align-items: center; gap: 30px; color: #a9b4c3; font-size: .92rem; }
 .desktop-nav a { transition: color .2s ease; }
 .desktop-nav a:hover { color: white; }
